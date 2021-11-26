@@ -16,7 +16,7 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         // $schedule->command('inspire')->hourly();
-        $schedule->command('websockets:serve')->withoutOverlapping();
+        $schedule->command('websockets:serve')->everyMinutes()->withoutOverlapping();
     }
 
     /**
